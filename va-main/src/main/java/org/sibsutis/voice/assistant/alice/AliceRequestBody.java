@@ -1,6 +1,7 @@
 package org.sibsutis.voice.assistant.alice;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.sibsutis.voice.assistant.alice.request.Request;
 
 public class AliceRequestBody {
 
@@ -8,15 +9,18 @@ public class AliceRequestBody {
     private final Session session;
     private final State state;
     private final String version;
+    private final Request request;
 
     public AliceRequestBody(@JsonProperty("meta") Meta meta,
                             @JsonProperty("session") Session session,
                             @JsonProperty("state") State state,
-                            @JsonProperty("version") String version) {
+                            @JsonProperty("version") String version,
+                            @JsonProperty("request") Request request) {
         this.meta = meta;
         this.session = session;
         this.state = state;
         this.version = version;
+        this.request = request;
     }
 
     public Meta getMeta() {
@@ -33,5 +37,9 @@ public class AliceRequestBody {
 
     public String getVersion() {
         return version;
+    }
+
+    public Request getRequest() {
+        return request;
     }
 }

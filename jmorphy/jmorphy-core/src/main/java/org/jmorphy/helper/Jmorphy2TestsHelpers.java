@@ -1,10 +1,9 @@
-package org.jmorphy.test;
+package org.jmorphy.helper;
 
 import org.jmorphy.MorphAnalyzer;
 import org.jmorphy.ResourceFileLoader;
 
 import java.io.IOException;
-import java.util.Map;
 
 public class Jmorphy2TestsHelpers {
 

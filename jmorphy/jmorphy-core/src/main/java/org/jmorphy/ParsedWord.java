@@ -23,6 +23,10 @@ public abstract class ParsedWord implements Comparable<ParsedWord> {
         this.score = score;
     }
 
+    public String getNormalForm() {
+        return normalForm;
+    }
+
     public abstract ParsedWord rescore(float newScore);
 
     public abstract List<ParsedWord> getLexeme();
