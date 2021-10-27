@@ -1,5 +1,7 @@
 package org.sibsutis.voice.assistant.service;
 
+import ch.qos.logback.classic.util.ContextInitializer;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;

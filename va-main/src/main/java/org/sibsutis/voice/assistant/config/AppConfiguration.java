@@ -2,8 +2,8 @@ package org.sibsutis.voice.assistant.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jmorphy.MorphAnalyzer;
-import org.jmorphy.helper.Jmorphy2TestsHelpers;
+import org.sibsutis.MorphAnalyzer;
+import org.sibsutis.helper.Jmorphy2TestsHelpers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

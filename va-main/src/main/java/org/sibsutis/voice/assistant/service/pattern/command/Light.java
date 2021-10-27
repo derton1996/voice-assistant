@@ -1,8 +1,6 @@
 package org.sibsutis.voice.assistant.service.pattern.command;
 
-import org.jmorphy.MorphAnalyzer;
 import org.sibsutis.voice.assistant.service.ParameterStringBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
