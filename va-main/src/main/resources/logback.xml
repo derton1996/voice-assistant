@@ -2,6 +2,12 @@
 
     <property name="HOME_LOG" value="D:/app.log"/>
 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${HOME_LOG}</file>
 
@@ -16,16 +22,13 @@
         </rollingPolicy>
 
         <encoder>
-            <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n</pattern>
         </encoder>
     </appender>
 
     <logger name="org.sibsutis" level="all" additivity="false">
+        <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE-ROLLING"/>
     </logger>
-
-    <root level="error">
-        <appender-ref ref="FILE-ROLLING"/>
-    </root>
 
 </configuration>
